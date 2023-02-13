@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app" style="height: 100vh"></div>
+
+    <!-- global states -->
+    <script src="./store/gameStore.js" defer></script>
+    <!-- other stuff -->
+    <!-- this is weird so what happen is when having modules and putting a function inside of string literals it will become undefined because its not in global scope for some reason-->
+    <!-- so what i did is to split them and remove modules... i actually don't know what really happen when having a modules  -->
+    <!-- in onClick, we can't wrap it with a function, it only work with onclick"foo()" not onclick(()=>{foo()}) -->
+    <script type="module" src="/main.js" defer></script>
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </body>
+</html>
